@@ -7,12 +7,15 @@
 
 class AbstractCalculator {
 public:
-    AbstractCalculator();
+    AbstractCalculator* getConstructorByPath(const QString &filePath)
+
     virtual ~AbstractCalculator();
 
     virtual void write(const QString &savePath, QVector<int> result) = 0;
     virtual QVector<int> parse(const QString &filePath) = 0;
 protected:
+    AbstractCalculator();
+
     virtual int sum(int a, int b);
     virtual int div(int a, int b);
     virtual int mult(int a, int b);

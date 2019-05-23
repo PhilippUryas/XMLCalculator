@@ -18,7 +18,9 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::doThisShit() {
-    XMLParser xml;
-    xml.write(QFileDialog::getSaveFileName(this, tr("Save File"), "/home/test", tr("")),
-              xml.parse(QFileDialog::getOpenFileName(this, tr("Open File"), "/home/test", tr(""))));
+    QString filePath = QFileDialog::getOpenFileName(this, tr("Open File"), "/home/test", tr(""));
+    AbstractCalculator *abcr = AbstractCalculator::getConstructorByPath(filePath);
+    abcr->write(QFileDialog::getSaveFileName(this, tr("Save File"), "/home/test", tr("")),
+               abcr->parse(filePath))
+
 }
