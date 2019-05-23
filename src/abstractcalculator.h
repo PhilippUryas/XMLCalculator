@@ -7,7 +7,7 @@
 
 class AbstractCalculator {
 public:
-    AbstractCalculator* getConstructorByPath(const QString &filePath)
+    static AbstractCalculator* getConstructorByPath(const QString &filePath);
 
     virtual ~AbstractCalculator();
 

@@ -1,5 +1,6 @@
 #include "abstractcalculator.h"
 #include "xmlparser.h"
+#include "txtparser.h"
 
 #include <QFileInfo>
 #include <qfile.h>
@@ -20,8 +21,8 @@ AbstractCalculator* AbstractCalculator::getConstructorByPath(const QString &file
 
     }
     else if(qfli.completeSuffix() == "txt") {
-        //TXTParser *txt = new TXTParser();
-        //return txt;
+        TXTParser *txt = new TXTParser();
+        return txt;
     }
 }
 

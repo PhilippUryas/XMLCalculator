@@ -28,12 +28,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     xmlparser.cpp \
-    abstractcalculator.cpp
+    abstractcalculator.cpp \
+    txtparser.cpp
 
 HEADERS += \
         mainwindow.h \
     xmlparser.h \
-    abstractcalculator.h
+    abstractcalculator.h \
+    txtparser.h
 
 FORMS += \
         mainwindow.ui
